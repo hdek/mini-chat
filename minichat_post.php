@@ -1,8 +1,11 @@
 <?php
+  session_start();
+  $pseudo = $_POST['pseudo'];
+  $_SESSION['pseudo'] = $pseudo;
+
   // Connexion à la base de données
   include 'connect.php';
 
-  $pseudo = $_POST['pseudo'];
   // Recherche du pseudo dans la table utilisateur pour avoir sont id
   $idPseudo = '';
   $req = $bdd->prepare('SELECT id FROM utilisateur WHERE pseudo = ?');

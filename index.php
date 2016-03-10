@@ -1,4 +1,10 @@
 <?php
+  session_start();
+  $pseudo = '';
+  if(isset($_SESSION['pseudo'])) {
+    $pseudo = $_SESSION['pseudo'];
+  }
+
   // Connexion à la base de données
   include 'connect.php';
 ?>
@@ -30,7 +36,7 @@
                 <div class="form-group">
                   <label for="pseudo" class="col-sm-5 control-label">Pseudo</label>
                   <div class="col-sm-7">
-                    <input type="text" name="pseudo" id="pseudo" required="required" />
+                    <input type="text" name="pseudo" id="pseudo" required="required" value="<?php echo $pseudo;?>" />
                   </div>
                 </div>
                 <div class="form-group">
