@@ -1,6 +1,6 @@
 <?php
   // Connexion à la base de données
-  $base = 'mini_chat';
+  $base = 'mini-chat';
   $user = 'test';
   $password = 'test';
 
